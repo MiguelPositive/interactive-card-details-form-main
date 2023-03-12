@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "space";
+  src: url("./fonts/SpaceGrotesk-Light.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "spaceBold";
+  src: url("./fonts/SpaceGrotesk-Bold.ttf");
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "space";
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.main-background {
+  background-image: linear-gradient(
+    to bottom right,
+
+    #3c104d,
+    #302d5c,
+    #481e34
+  );
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-main {
+  border: 1px solid gray;
+}
