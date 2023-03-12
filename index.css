@@ -127,9 +127,6 @@ span {
 }
 
 .cant-blank {
-  transition: 0.3s;
-  opacity: 0;
-
   display: flex;
   justify-content: space-between;
 
@@ -138,7 +135,14 @@ span {
   color: #ff7e87;
 }
 
+.warning-date {
+  transition: 0.3s;
+  opacity: 0;
+}
+
 .warning-cvc {
+  transition: 0.3s;
+  opacity: 0;
   margin-right: clamp(5vw, 7vw, 6vw);
 }
 

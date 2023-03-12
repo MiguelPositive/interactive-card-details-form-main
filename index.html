@@ -27,8 +27,14 @@
 
             <div class="number">
               <p>CARD NUMBER</p>
-              <input type="text" placeholder="e.g. 1234 5678 9123 0000" />
-              <p class="warning-number">Wrong format, numbers only</p>
+              <input
+                type="text"
+                placeholder="e.g. 1234 5678 9123 0000"
+                class="input-number"
+              />
+              <p class="warning-number" id="warning-number">
+                Wrong format, numbers only
+              </p>
             </div>
 
             <div>
@@ -36,15 +42,30 @@
 
               <div class="date-fields">
                 <div class="date">
-                  <input type="number" placeholder="MM" />
-                  <input type="number" placeholder="YY" />
+                  <input
+                    type="number"
+                    placeholder="MM"
+                    class="month"
+                    id="month"
+                  />
+                  <input
+                    type="number"
+                    placeholder="YY"
+                    class="year"
+                    id="year"
+                  />
                 </div>
 
-                <input type="number" class="cvc" placeholder="e.g 123" />
+                <input
+                  type="number"
+                  class="cvc"
+                  id="cvc"
+                  placeholder="e.g 123"
+                />
               </div>
-              <div class="cant-blank">
-                <p class="warning-date">Can´t be blank</p>
-                <p class="warning-cvc">Can´t be blank</p>
+              <div class="cant-blank" id="cant-blank">
+                <p class="warning-date" id="warning-date">Can´t be blank</p>
+                <p class="warning-cvc" id="warning-cvc">Can´t be blank</p>
               </div>
             </div>
 
