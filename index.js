@@ -1,4 +1,7 @@
 const btnConfirm = document.querySelector(".btn-confirm");
+const formSend = document.getElementById("form-send");
+const containerMain = document.getElementById("container-main");
+let temp = false;
 
 const inputNumber = document.querySelector(".input-number");
 
@@ -63,5 +66,15 @@ cvc.addEventListener("input", (e) => {
 });
 
 btnConfirm.addEventListener("click", () => {
-  alert("JS EN EJECUCIÓN");
+  temp = !temp;
+
+  if (temp) {
+    containerMain.style.cssText = "transition: linear 0.3s; opacity: 0";
+
+    formSend.style.cssText = "transition: linear 0.3s; opacity: 1";
+  } else {
+    formSend.style.cssText = "transition: linear 0.3s; opacity: 0";
+
+    containerMain.style.cssText = "transition: linear 0.3s; opacity: 1";
+  }
 });
