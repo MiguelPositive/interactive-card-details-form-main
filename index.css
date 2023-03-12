@@ -28,6 +28,23 @@ main {
   grid-template-rows: 1fr;
 }
 
+input {
+  width: 100%;
+
+  border: 0.3px solid rgba(0, 0, 0, 0.26);
+  border-radius: clamp(0.3vw, 0.5vw, 0.4vw);
+
+  font-size: clamp(1.2vw, 1.6vw, 1.4vw);
+
+  padding: clamp(0.4vw, 0.6vw, 0.5vw);
+
+  font-family: "spaceBold";
+}
+
+input:focus {
+  outline: none;
+}
+
 .main-background {
   background-image: linear-gradient(
     to bottom right,
@@ -45,4 +62,69 @@ main {
 
 .container-main {
   border: 1px solid gray;
+
+  width: clamp(25vw, 32vw, 28vw);
+  height: clamp(22vw, 28vw, 24vw);
+}
+
+.btn-confirm {
+  background-color: #220930;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: clamp(1.2vw, 1.6vw, 1.4vw);
+
+  padding: clamp(0.5vw, 0.7vw, 0.6vw);
+  margin-top: clamp(1vw, 2.5vw, 2vw);
+  border-radius: clamp(0.3vw, 0.5vw, 0.4vw);
+
+  cursor: pointer;
+}
+
+p,
+span {
+  font-weight: bold;
+  margin-bottom: clamp(0.2vw, 0.4vw, 0.3vw);
+
+  font-size: clamp(0.8vw, 1.2vw, 1vw);
+}
+
+span {
+  margin-left: clamp(4.5vw, 6.5vw, 5.5vw);
+}
+
+.warning-number {
+  color: #ff7e87;
+  margin-top: clamp(0.5vw, 0.7vw, 0.6vw);
+}
+
+.date-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  gap: clamp(1vw, 2vw, 1.5vw);
+}
+
+.date {
+  display: grid;
+
+  grid-template-columns: 0.5fr 0.5fr;
+  grid-template-rows: 1fr;
+
+  gap: clamp(1vw, 2vw, 1.5vw);
+}
+
+.cant-blank {
+  display: flex;
+  justify-content: space-between;
+
+  color: #ff7e87;
+}
+
+.warning-cvc {
+  margin-right: clamp(5vw, 7vw, 6vw);
 }

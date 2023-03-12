@@ -20,15 +20,35 @@
       <div class="main">
         <div class="container-main">
           <form>
-            <div>
+            <div class="name">
               <p>CARD HOLDER NAME</p>
               <input type="text" />
             </div>
 
-            <div>
+            <div class="number">
               <p>CARD NUMBER</p>
-              <input type="number" />
+              <input type="text" />
+              <p class="warning-number">Wrong format, numbers only</p>
             </div>
+
+            <div>
+              <p>EXP. DATE (MM/YY) <span>CVC</span></p>
+
+              <div class="date-fields">
+                <div class="date">
+                  <input type="number" />
+                  <input type="number" />
+                </div>
+
+                <input type="number" class="cvc" />
+              </div>
+              <div class="cant-blank">
+                <p class="warning-date">Can´t be blank</p>
+                <p class="warning-cvc">Can´t be blank</p>
+              </div>
+            </div>
+
+            <div class="btn-confirm">Confirm</div>
           </form>
         </div>
       </div>
