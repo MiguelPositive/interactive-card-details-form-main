@@ -20,6 +20,7 @@ body {
 }
 
 main {
+  position: relative;
   width: 100vw;
   height: 100vh;
 
@@ -91,8 +92,6 @@ input:focus {
   align-items: center;
   flex-wrap: wrap;
 
-  /* padding-bottom: clamp(1vw, 1.7vw, 1.5vw); */
-
   z-index: -1;
 }
 
@@ -119,6 +118,8 @@ h1 {
 
   font-family: "spaceBold";
   font-size: clamp(2vw, 3.5vw, 2.5vw);
+
+  text-align: center;
 }
 
 .btn-confirm,
@@ -133,7 +134,7 @@ h1 {
   font-size: clamp(1.2vw, 1.6vw, 1.4vw);
 
   padding: clamp(0.5vw, 0.7vw, 0.6vw);
-  /* margin-top: clamp(1vw, 2.5vw, 2vw); */
+
   border-radius: clamp(0.3vw, 0.5vw, 0.4vw);
 
   cursor: pointer;
@@ -142,6 +143,8 @@ h1 {
 .btn-continue {
   margin-top: clamp(2vw, 4vw, 3vw);
   width: 100%;
+
+  cursor: pointer;
 }
 
 .text-thank-you {
@@ -225,10 +228,8 @@ span {
   top: clamp(5vw, 7vw, 6vw);
   left: clamp(5vw, 11vw, 8vw);
 
-  /* top: calc(6rem + 0.5em);
-  left: calc(8rem + 0.5em); */
-
   background-image: url("./images/bg-card-front.png");
+
   color: white;
 }
 
@@ -237,9 +238,6 @@ span {
 
   top: clamp(20vw, 30vw, 25vw);
   left: clamp(10vw, 20vw, 15vw);
-
-  /* top: calc(23rem + 0.5em);
-  left: calc(12rem + 0.5em); */
 }
 
 .circles {
@@ -291,4 +289,268 @@ span {
 
 .text-date {
   margin-top: 0;
+}
+
+@media (max-width: 1440px) {
+  .card-1 {
+    top: clamp(8vw, 12vw, 10vw);
+    left: clamp(5vw, 11vw, 8vw);
+  }
+
+  .card-2 {
+    top: clamp(25vw, 35vw, 30vw);
+    left: clamp(10vw, 20vw, 15vw);
+  }
+}
+
+@media (max-width: 1366px) {
+  .card-1 {
+    top: clamp(8vw, 10vw, 9vw);
+    left: clamp(5vw, 11vw, 8vw);
+  }
+
+  .card-2 {
+    top: clamp(22vw, 32vw, 27vw);
+    left: clamp(10vw, 20vw, 15vw);
+  }
+}
+
+@media (max-width: 1280px) {
+  input {
+    font-size: calc(1rem 0.5em);
+
+    padding: calc(0.3rem + 0.5em);
+  }
+  h1 {
+    margin-top: calc(0.5rem + 0.5em);
+  }
+
+  .container-main,
+  .form-send {
+    width: calc(22rem + 0.5em);
+    height: calc(22rem + 0.5em);
+  }
+
+  .card {
+    width: calc(20rem + 0.5em);
+    height: calc(10rem + 0.5em);
+
+    padding: calc(0.5rem + 0.5em);
+  }
+
+  .card-1 {
+    top: calc(7rem + 0.5em);
+    left: clamp(5vw, 11vw, 8vw);
+  }
+
+  .card-2 {
+    top: calc(22rem + 0.5em);
+    left: clamp(10vw, 20vw, 15vw);
+  }
+
+  .card-1 div {
+    font-size: calc(0.55rem + 0.5em);
+  }
+
+  p,
+  span {
+    margin-bottom: clamp(0.2vw, 0.4vw, 0.3vw);
+
+    font-size: calc(0.5rem + 0.5em);
+  }
+
+  .text-thank-you {
+    font-size: calc(1rem + 0.5em);
+  }
+
+  .logo-thank-you {
+    width: calc(3rem + 0.5em);
+    height: calc(3rem + 0.5em);
+  }
+
+  .btn-confirm,
+  .btn-continue {
+    font-size: calc(0.8rem + 0.5em);
+
+    padding: calc(0.2rem + 0.2em);
+  }
+}
+
+@media (max-width: 1050px) {
+  .card {
+    width: clamp(28vw, 43vw, 33vw);
+    height: clamp(10vw, 25vw, 17vw);
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    width: clamp(24vw, 32vw, 28vw);
+    height: clamp(8vw, 22vw, 15vw);
+
+    font-size: calc(0.1rem + 0.4em);
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 1fr;
+
+    margin-bottom: calc(2.5rem + 0.5em);
+  }
+
+  input {
+    font-size: calc(0.7rem + 0.5em);
+  }
+
+  .card {
+    width: calc(20rem + 0.5em);
+    height: calc(10rem + 0.5em);
+
+    padding: calc(0.5rem + 0.5em);
+
+    border-radius: calc(0.3rem + 0.3em);
+  }
+
+  .container-main {
+    padding-top: calc(5rem + 0.5em);
+  }
+
+  .form-send {
+    padding-top: calc(7.5rem + 0.5em);
+  }
+
+  .card-1 {
+    top: clamp(10vw, 20vw, 15vw);
+    left: clamp(20vw, 30vw, 25vw);
+    right: clamp(25vw, 43vw, 30vw);
+
+    z-index: 1;
+
+    font-size: calc(0.55rem + 0.5em);
+  }
+
+  .card-2 {
+    top: clamp(5vw, 10vw, 7vw);
+    left: clamp(25vw, 40vw, 30vw);
+    right: clamp(25vw, 40vw, 30vw);
+
+    z-index: 0;
+  }
+
+  h1 {
+    font-size: calc(1.5rem + 0.5em);
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    margin-bottom: calc(5rem + 0.5em);
+  }
+
+  .container-main {
+    padding-top: calc(7rem + 0.5em);
+  }
+
+  .card-1 {
+    top: clamp(18vw, 28vw, 23vw);
+  }
+
+  .form-send {
+    padding-top: calc(10rem + 0.5em);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-1 {
+    top: clamp(22vw, 33vw, 27vw);
+  }
+
+  .name-card div + div {
+    margin-bottom: calc(2rem + 0.5em);
+  }
+
+  .expired {
+    margin-top: calc(1.3rem + 0.5em);
+  }
+}
+
+@media (max-width: 530px) {
+  .card-1 {
+    top: clamp(25vw, 45vw, 30vw);
+
+    left: clamp(8vw, 18vw, 13vw);
+    left: clamp(8vw, 18vw, 13vw);
+  }
+
+  .card-2 {
+    left: clamp(15vw, 35vw, 20vw);
+    right: clamp(15vw, 35vw, 20vw);
+  }
+}
+
+@media (max-width: 450px) {
+  .card-1 {
+    top: clamp(30vw, 50vw, 35vw);
+
+    left: clamp(4vw, 13vw, 8vw);
+    left: clamp(4vw, 13vw, 8vw);
+  }
+
+  .card-2 {
+    left: clamp(10vw, 20vw, 15vw);
+    right: clamp(10vw, 20vw, 15vw);
+  }
+}
+
+@media (max-width: 410px) {
+  .card {
+    width: calc(18rem + 0.5em);
+    height: calc(10rem + 0.5em);
+  }
+
+  .card-1 {
+    top: clamp(35vw, 55vw, 40vw);
+
+    left: clamp(2vw, 11vw, 6vw);
+    left: clamp(2vw, 11vw, 6vw);
+  }
+
+  .card-2 {
+    left: clamp(8vw, 18vw, 13vw);
+    right: clamp(8vw, 18vw, 13vw);
+  }
+
+  .btn-continue {
+    width: 90%;
+  }
+
+  .container-main,
+  .form-send {
+    width: calc(18rem + 0.5em);
+    height: calc(18rem + 0.5em);
+  }
+}
+
+@media (max-width: 370px) {
+  .card {
+    width: calc(17rem + 0.5em);
+    height: calc(10rem + 0.5em);
+  }
+
+  .container-main {
+    padding-top: calc(4rem + 0.5em);
+  }
+
+  .form-send {
+    padding-top: calc(5rem + 0.5em);
+  }
+
+  .container-main,
+  .form-send {
+    width: calc(16rem + 0.5em);
+    height: calc(16rem + 0.5em);
+  }
 }

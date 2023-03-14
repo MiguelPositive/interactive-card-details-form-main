@@ -1,4 +1,5 @@
 const btnConfirm = document.querySelector(".btn-confirm");
+const btnContinue = document.querySelector(".btn-continue");
 const formSend = document.getElementById("form-send");
 const containerMain = document.getElementById("container-main");
 let temp = false;
@@ -65,16 +66,22 @@ cvc.addEventListener("input", (e) => {
   }
 });
 
-btnConfirm.addEventListener("click", () => {
+const handleSend = () => {
   temp = !temp;
 
   if (temp) {
-    containerMain.style.cssText = "transition: linear 0.3s; opacity: 0";
+    containerMain.style.cssText =
+      "transition: linear 0.3s; opacity: 0; z-index: -1";
 
-    formSend.style.cssText = "transition: linear 0.3s; opacity: 1";
+    formSend.style.cssText = "transition: linear 0.3s; opacity: 1;  z-index: 1";
   } else {
-    formSend.style.cssText = "transition: linear 0.3s; opacity: 0";
+    formSend.style.cssText =
+      "transition: linear 0.3s; opacity: 0;  z-index: -1";
 
-    containerMain.style.cssText = "transition: linear 0.3s; opacity: 1";
+    containerMain.style.cssText =
+      "transition: linear 0.3s; opacity: 1;  z-index: 1";
   }
-});
+};
+
+btnConfirm.addEventListener("click", handleSend);
+btnContinue.addEventListener("click", handleSend);
