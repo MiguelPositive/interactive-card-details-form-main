@@ -372,6 +372,8 @@ span {
   .btn-continue {
     font-size: calc(0.8rem + 0.5em);
 
+    border-radius: calc(0.2rem + 0.2em);
+
     padding: calc(0.2rem + 0.2em);
   }
 }
@@ -505,6 +507,12 @@ span {
   }
 }
 
+@media (max-width: 420px) {
+  .container-main {
+    padding-top: 1%;
+  }
+}
+
 @media (max-width: 410px) {
   .card {
     width: calc(18rem + 0.5em);
@@ -540,9 +548,9 @@ span {
     height: calc(10rem + 0.5em);
   }
 
-  .container-main {
+  /* .container-main {
     padding-top: calc(4rem + 0.5em);
-  }
+  } */
 
   .form-send {
     padding-top: calc(5rem + 0.5em);
