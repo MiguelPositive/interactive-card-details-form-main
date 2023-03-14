@@ -505,6 +505,10 @@ span {
     left: clamp(10vw, 20vw, 15vw);
     right: clamp(10vw, 20vw, 15vw);
   }
+
+  .form-send {
+    padding-top: calc(2rem + 0.5em);
+  }
 }
 
 @media (max-width: 420px) {
@@ -547,10 +551,6 @@ span {
     width: calc(17rem + 0.5em);
     height: calc(10rem + 0.5em);
   }
-
-  /* .container-main {
-    padding-top: calc(4rem + 0.5em);
-  } */
 
   .form-send {
     padding-top: calc(5rem + 0.5em);
